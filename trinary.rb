@@ -3,7 +3,9 @@
 # frozen_string_literal: true
 
 class Trinary
-  TO_I = { '0' => 0, '1' => 1, '2' => 2 }.freeze # Can't use to_i
+  # Problem statement is such that we can't use String#to_i. However, even if
+  # it were allowed, using this hash makes error detection easier.
+  TO_I = { '0' => 0, '1' => 1, '2' => 2 }.freeze 
 
   def initialize(trinary_number_string)
     @trinary_number = trinary_number_string
