@@ -1,6 +1,6 @@
-# Copyright (c) 2016 Pete Hanson
-#
 # frozen_string_literal: true
+#
+# Copyright (c) 2016 Pete Hanson
 
 class Trinary
   # Problem statement is such that we can't use String#to_i. However, even if
