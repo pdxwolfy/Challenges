@@ -1,0 +1,23 @@
+GIT
+  remote: https://github.com/pry/pry.git
+  revision: 90d127778f3f4e9581d9dfb5c17851af48867186
+  ref: 90d127778f3f4e9581d9dfb5c17851af48867186
+  specs:
+    pry (0.10.3)
+      coderay (~> 1.1.0)
+      method_source (~> 0.8.1)
+
+GEM
+  remote: https://rubygems.org/
+  specs:
+    coderay (1.1.1)
+    method_source (0.8.2)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  pry!
+
+BUNDLED WITH
+   1.11.2
