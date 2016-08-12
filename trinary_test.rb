@@ -3,6 +3,7 @@ SimpleCov.start
 
 require 'minitest/autorun'
 require 'minitest/reporters'
+require 'pry-rescue/minitest'
 Minitest::Reporters.use!
 
 require_relative 'trinary'
@@ -25,7 +26,7 @@ class TrinaryTest < Minitest::Test
   end
 
   def test_trinary_100_is_decimal_9
-    assert_equal 9, Trinary.new('100').to_decimal
+    assert_equal 9, Trinary.new('1001').to_decimal
   end
 
   def test_trinary_112_is_decimal_14
