@@ -37,22 +37,26 @@ class Diamond
     @rows = Array.new(@size) { ' ' * @size + "\n" }
   end
 
-  def index_of letter
-    letter.ord - 'A'.ord
-  end
-
   def build
     ('A'..@last_letter).each { |letter| add_to_display letter }
     @rows.join
   end
 
+  private
+
+  def index_of letter
+    letter.ord - 'A'.ord
+  end
+
   def add_to_display letter
     index = index_of letter
+    upper_row = @rows[index]
+    lower_row = @rows[@size - (index + 1)]
+    center_column = (@size - 1) / 2
 
-    center = (@size - 1) / 2
-    @rows[index][center - index] = letter
-    @rows[index][center + index] = letter
-    @rows[@size - (index + 1)][center - index] = letter
-    @rows[@size - (index + 1)][center + index] = letter
+    [upper_row, lower_row].each do |row|
+      row[center_column - index] = letter
+      row[center_column + index] = letter
+    end
   end
 end
