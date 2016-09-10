@@ -47,3 +47,5 @@ class WordProblem
     useful_tokens.each_slice 2
   end
 end
+
+puts WordProblem.new('What is 3 plus 3?').answer

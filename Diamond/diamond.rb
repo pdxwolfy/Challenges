@@ -27,6 +27,7 @@ end
 # there is no edge case processing required.
 class Diamond
   def self.make_diamond last_letter
+    binding.pry
     diamond = Diamond.new last_letter
     diamond.build
   end
